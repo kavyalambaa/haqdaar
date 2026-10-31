@@ -5,6 +5,16 @@
 
 Built by **Team Voyagers**.
 
+## 🌐 Live Demo
+
+**Try HAQDAAR here:** [https://haqdaar-tau.vercel.app/](https://haqdaar-tau.vercel.app/)
+
+- **Frontend:** Vercel
+- **Backend API:** [https://haqdaar.onrender.com](https://haqdaar.onrender.com)
+- **API Documentation:** [Swagger UI](https://haqdaar.onrender.com/docs)
+
+> HAQDAAR is a multilingual voice assistant designed to help citizens access information about government schemes and agricultural support in Hindi, Marathi, and Tamil.
+
 ---
 
 ## 🌟 Key Features
