@@ -1,0 +1,71 @@
+{
+  "document_id": "farm_pond_rajkisan_2026",
+  "title": "खेत तलाइ - Farm Pond Construction Subsidy Scheme",
+  "institution": "Agriculture Department, Government of Rajasthan",
+  "publisher": "Government of Rajasthan",
+  "source_url": "https://rajkisan.rajasthan.gov.in/Rajkisanweb/Kisan",
+  "document_type": "official_government_portal_scheme_page_snapshot",
+  "downloaded_on": "2026-10-31",
+  "language": ["Hindi", "English"],
+  "scheme_category": "agriculture_water_conservation_subsidy",
+  "geographic_relevance": ["Rajasthan"],
+  "topics": [
+    "farm pond",
+    "rainwater harvesting",
+    "irrigation",
+    "kachcha farm pond",
+    "plastic lined farm pond",
+    "subsidy",
+    "farmer eligibility",
+    "joint land ownership",
+    "application procedure",
+    "required documents",
+    "administrative approval",
+    "physical verification"
+  ],
+  "benefits_as_displayed": {
+    "minimum_capacity_cubic_metres": 400,
+    "sc_st_small_marginal_farmers": {
+      "kachcha": "70% of unit cost or maximum INR 73500, whichever is lower",
+      "plastic_lined": "90% of unit cost or maximum INR 135000, whichever is lower"
+    },
+    "other_farmers": {
+      "kachcha": "60% of unit cost or maximum INR 63000, whichever is lower",
+      "plastic_lined": "80% of unit cost or maximum INR 120000, whichever is lower"
+    }
+  },
+  "eligibility_summary": [
+    "Minimum 0.3 hectare cultivable land at one location in the farmer's own name",
+    "Joint landholders must meet the minimum 0.3 hectare joint-ownership condition displayed on the portal"
+  ],
+  "required_documents": [
+    "Aadhaar Card or Jan Aadhaar Card",
+    "Jamabandi copy not older than six months"
+  ],
+  "application_process": [
+    "Apply through Raj Kisan Sathi portal or nearby e-Mitra centre",
+    "Online application receipt is provided"
+  ],
+  "construction_conditions": [
+    "Administrative approval required before construction",
+    "Physical verification before and after construction",
+    "Subsidy deposited directly into farmer's bank account"
+  ],
+  "validity_as_displayed": "Current financial year",
+  "limitations": [
+    "Portal snapshot does not include a separate government order or notification number",
+    "Verify current subsidy amounts and eligibility before giving final advice",
+    "Preserve separate subsidy rates for kachcha and plastic-lined ponds",
+    "Do not infer additional eligibility conditions"
+  ],
+  "safety_filters": {
+    "allow_scheme_information": true,
+    "allow_subsidy_information_with_source_context": true,
+    "require_current_verification_for_eligibility": true,
+    "require_current_verification_for_subsidy_amounts": true,
+    "never_collect_aadhaar_or_jan_aadhaar_in_chat": true,
+    "never_claim_application_approval": true
+  },
+  "ingestion_status": "approved_for_conditional_ingestion_with_safety_filters",
+  "notes": "Official Raj Kisan Sathi portal snapshot dated 31 October 2026. Preserve the distinction between kachcha and plastic-lined ponds and the farmer-category subsidy rates."
+}

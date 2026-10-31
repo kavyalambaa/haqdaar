@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+.env
+.env.*
+!.env.example
+
+frontend/node_modules/
+frontend/dist/
+
+*.mp3
+__pycache__/
+*.py[cod]
+
+*.bak
+backend/out.txt
+backend/eval_dev_extractor_out.txt

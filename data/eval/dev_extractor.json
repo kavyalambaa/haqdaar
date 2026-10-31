@@ -1,0 +1,21 @@
+{
+  "purpose": "DEVELOPMENT set. Prompt was tuned on these. Use for regression checks only, never to report accuracy.",
+  "frozen_on": "2026-10-30",
+  "scoring": "Fields not listed in expected must be null. A list value means any one of the items is accepted. Unit and place spelling is compared loosely.",
+  "cases": [
+    {"id": "dev01", "text": "मेरे पास दो बीघा ज़मीन है और मैं खेती करता हूँ", "expected": {"occupation": ["farmer", "cultivator"], "land": {"value": 2, "unit": "bigha"}}},
+    {"id": "dev02", "text": "मेरी उम्र पैंतालीस साल है", "expected": {"age": 45}},
+    {"id": "dev03", "text": "मेरी पत्नी गर्भवती है, तीसरा महीना चल रहा है", "expected": {"is_pregnant": true, "pregnancy_month": 3, "pregnant_person": "wife"}},
+    {"id": "dev04", "text": "हमारा राशन कार्ड पीला है", "expected": {"ration_card_type": ["पीला", "yellow"]}},
+    {"id": "dev05", "text": "मैं राजस्थान के सीकर ज़िले में रहता हूँ", "expected": {"state": ["राजस्थान", "Rajasthan"], "district": ["सीकर", "Sikar"]}},
+    {"id": "dev06", "text": "मैं 28 साल की औरत हूँ और मैं गर्भवती हूँ, पाँचवां महीना है", "expected": {"age": 28, "gender": "female", "is_pregnant": true, "pregnancy_month": 5, "pregnant_person": "self"}},
+    {"id": "dev07", "text": "मेरे पास कोई ज़मीन नहीं है, मैं मज़दूरी करता हूँ", "expected": {"occupation": ["labourer", "laborer"], "land": {"value": 0, "unit": null}}},
+    {"id": "dev08", "text": "मेरी उम्र साठ साल है और मेरा बेटा बीस साल का है", "expected": {"age": 60}},
+    {"id": "dev09", "text": "meri age 45 hai, 2 bigha land hai, Sikar mein rehta hoon", "expected": {"age": 45, "land": {"value": 2, "unit": "bigha"}, "district": ["सीकर", "Sikar"]}},
+    {"id": "dev10", "text": "मेरे पास पाँच कट्ठा ज़मीन है", "expected": {"land": {"value": 5, "unit": ["kattha", "katha"]}}},
+    {"id": "dev11", "text": "मेरी ज़मीन के बारे में मुझे नहीं पता", "expected": {}},
+    {"id": "dev12", "text": "मेरी पत्नी और मेरी माँ दोनों गर्भवती हैं", "expected": {"is_pregnant": true, "pregnant_person": "other"}},
+    {"id": "dev13", "text": "मैं किसान हूँ और मेरी उम्र 52 साल है", "expected": {"age": 52, "occupation": "farmer"}},
+    {"id": "dev14", "text": "मैं बीए की पढ़ाई कर रहा हूँ", "expected": {"occupation": "student"}}
+  ]
+}

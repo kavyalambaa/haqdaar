@@ -1,0 +1,53 @@
+
+{
+  "document_id": "mustard_transforming_rajasthan_icar_2025",
+  "title": "Transforming Mustard Cultivation in Rajasthan: Field Level Experiences of Cluster FLDs",
+  "authors": [
+    "M. S. Meena",
+    "H. N. Meena",
+    "Raveena Bishnoi",
+    "Dilip Panwar"
+  ],
+  "publisher": "ICAR-Agricultural Technology Application Research Institute",
+  "publisher_location": "Jodhpur, Rajasthan",
+  "publication_year": 2025,
+  "publication_date": "February 2025",
+  "journal": "Indian Farming",
+  "volume_issue_pages": "75 (02): 10-14",
+  "source_url": "https://epubs.icar.org.in/index.php/IndFarm/article/download/155207/59611/457688",
+  "local_file": "data/research/mustard/Transforming-Mustard-Cultivation-Rajasthan-2025.pdf",
+  "crop": "mustard",
+  "scientific_name": "Brassica juncea",
+  "geographic_scope": [
+    "India",
+    "Rajasthan"
+  ],
+  "topics": [
+    "Cluster Frontline Demonstrations",
+    "Mustard variety performance",
+    "District-wise yield comparison",
+    "Yield gap analysis",
+    "Integrated nutrient management",
+    "Integrated pest and disease management",
+    "Improved agricultural practices",
+    "Mustard cultivation economics",
+    "Farmer income enhancement"
+  ],
+  "data_period": "Rabi 2022-23",
+  "rag_status": "approved_for_supplementary_ingestion",
+  "limitations": [
+    "This is a field-demonstration research article, not a complete mustard cultivation manual.",
+    "Yield and economic figures are historical results from 2022-23.",
+    "Variety performance differs across districts and local conditions.",
+    "The article does not provide a complete step-by-step cultivation schedule.",
+    "Do not treat historical variety recommendations as current without verification.",
+    "Do not generate pesticide dosage recommendations from this document."
+  ],
+  "verification": {
+    "document_inspected": true,
+    "bibliographic_details_verified": true,
+    "crop_relevance_verified": true,
+    "rajasthan_relevance_verified": true,
+    "verified_on": "2026-10-31"
+  }
+}

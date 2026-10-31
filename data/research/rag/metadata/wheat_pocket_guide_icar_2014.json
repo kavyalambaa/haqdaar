@@ -1,0 +1,47 @@
+{
+  "document_id": "wheat_pocket_guide_icar_2014",
+  "title": "Wheat Cultivation in India - Pocket Guide",
+  "authors": [
+    "Anuj Kumar",
+    "Randhir Singh",
+    "Gyanendra Singh",
+    "R.K. Sharma",
+    "M.S. Saharan",
+    "R.S. Chhokar",
+    "B.S. Tyagi",
+    "R. Sendhil",
+    "Ramesh Chand",
+    "Indu Sharma"
+  ],
+  "publisher": "ICAR - Directorate of Wheat Research",
+  "location": "Karnal, Haryana, India",
+  "publication_year": 2014,
+  "publication_date": "2014-09",
+  "document_type": "Extension Bulletin 52",
+  "source_url": "https://iiwbr.org.in/wp-content/uploads/2023/08/EB-52-Wheat-Cultivation-in-India-Pocket-Guide.pdf",
+  "local_file": "data/research/wheat/Wheat-Cultivation-Pocket-Guide.pdf",
+  "crop": "wheat",
+  "geo_scope": [
+    "India",
+    "Rajasthan"
+  ],
+  "relevant_sections": [
+    "General information",
+    "Choice of variety",
+    "Agronomic practices",
+    "Application of micronutrients",
+    "Crop protection",
+    "Water management",
+    "Resource conservation technologies",
+    "Harvesting, threshing and storage"
+  ],
+  "rag_status": "approved_for_initial_ingestion_with_safety_filters",
+  "limitations": [
+    "Publication is from 2014; variety recommendations may be outdated.",
+    "Pesticide and herbicide recommendations must not be served as current advice without checking current registrations and official recommendations.",
+    "Rajasthan has two wheat-growing zone classifications in this document: NWPZ and Central Zone.",
+    "Farm-specific fertilizer recommendations require soil testing and current local guidance."
+  ],
+  "verified": true,
+  "verified_on": "2026-10-31"
+}

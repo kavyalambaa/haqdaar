@@ -1,0 +1,50 @@
+{
+  "document_id": "bajra_gap_icar_iimr_2025",
+  "title": "Good Agricultural Practices (GAP) Manual for Sustainable Millets Production in India",
+  "authors": [
+    "B Gangaiah",
+    "C Tara Satyavathi"
+  ],
+  "publisher": "ICAR-Indian Institute of Millets Research",
+  "institution_location": "Hyderabad, Telangana, India",
+  "publication_year": 2025,
+  "publication_date": "December 2025",
+  "isbn": "978-93-94673-53-3",
+  "source_url": null,
+  "local_file": "data/research/bajra/GAP-English.pdf",
+  "document_type": "Official agricultural research and good agricultural practices manual",
+  "crops": [
+    "pearl millet",
+    "bajra"
+  ],
+  "geographic_scope": "India, with state-specific information including Rajasthan",
+  "relevant_chapter": "Chapter 2: Pearl millet",
+  "relevant_topics": [
+    "agro-ecological zones",
+    "varieties",
+    "sowing",
+    "seed rate",
+    "spacing",
+    "nutrient management",
+    "water management",
+    "weed management",
+    "pest management",
+    "disease management",
+    "harvesting",
+    "storage",
+    "minimum support price"
+  ],
+  "rag_status": "approved_for_initial_ingestion_with_safety_filters",
+  "limitations": [
+    "Recommendations must be filtered by crop zone and local conditions.",
+    "Research findings must not be presented as universal recommendations.",
+    "Pesticide and chemical treatment recommendations require current registration and label verification.",
+    "Historical MSP figures must not be presented as current prices."
+  ],
+  "verification": {
+    "document_opened": true,
+    "publication_details_checked": true,
+    "text_extraction_available": true,
+    "verified_on": "2026-10-31"
+  }
+}

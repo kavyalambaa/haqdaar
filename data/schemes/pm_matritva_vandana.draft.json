@@ -1,0 +1,28 @@
+{
+  "scheme_id": "pmmvy",
+  "name_en": "PM Matru Vandana Yojana (PMMVY 2.0, Mission Shakti)",
+  "status": "DRAFT_FROM_OFFICIAL_PARLIAMENT_ANSWER",
+  "last_verified": null,
+  "benefit": "First child: Rs 5000 in two instalments (Rs 3000 + Rs 2000). Second child only if a girl: Rs 6000 in one instalment.",
+  "documents_needed": ["Mother and Child Protection (MCP) card", "Proof of disadvantaged category (for example BPL card)", "Aadhaar-seeded bank or post office account"],
+  "apply_window": "within 270 days of childbirth",
+  "portal": "https://pmmvy.wcd.gov.in/",
+  "known_limits": [
+    "Rules read from a Lok Sabha answer of 20.12.2024. The scheme portal was not checked for newer changes",
+    "Source lists Odisha and Telangana as not implementing the scheme (as of 20.12.2024). Not verified as current",
+    "Second child benefit depends on the child being a girl, which is unknown during pregnancy. The app can only say 'conditional'",
+    "Exact age limit is 18 years 7 months. We only ask years, so age 18 and 55 stay unknown"
+  ],
+  "sources": [
+    {"id": "s1", "url": "https://eparlib.sansad.in/bitstream/123456789/2987297/1/AU4224_tKDJ2x.pdf", "publisher": "Ministry of Women and Child Development, Lok Sabha Unstarred Question 4224", "date_on_page": "2024-12-20"},
+    {"id": "s2", "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/aug/doc2025825619601.pdf", "publisher": "PIB backgrounder", "date_on_page": "2025-08-24"}
+  ],
+  "rules": [
+    {"rule_id": "age_in_range", "field": "age", "op": "age_range", "pass_from": 19, "pass_to": 54, "unknown_at": [18, 55], "on_null": "unknown", "source": "s1", "enabled": true},
+    {"rule_id": "pregnant_or_lactating", "field": "is_pregnant_or_lactating", "op": "is_true", "on_null": "unknown", "source": "s1", "enabled": true},
+    {"rule_id": "living_children_ok", "field": "living_children_before", "op": "in_with_conditional", "pass": [0], "conditional": [1], "fail_if_more_than": 1, "on_null": "unknown", "source": "s1", "enabled": true, "note": "1 = pass only if this child is a girl"},
+    {"rule_id": "not_regular_govt_employee", "field": "self_regular_govt_or_psu_job", "op": "is_false", "on_null": "unknown", "source": "s1", "enabled": true},
+    {"rule_id": "no_similar_benefit", "field": "gets_similar_maternity_benefit_under_law", "op": "is_false", "on_null": "unknown", "source": "s1", "enabled": true},
+    {"rule_id": "disadvantaged_section", "op": "any_true", "fields": ["is_sc_st", "disability_40_plus", "has_bpl_card", "has_pmjay_benefit", "has_eshram_card", "woman_gets_pm_kisan", "has_mgnrega_card", "family_income_under_8_lakh", "is_asha_aww_ahw", "has_nfsa_ration_card"], "on_all_false": "fail", "on_any_null_and_none_true": "unknown", "source": "s1", "enabled": true}
+  ]
+}

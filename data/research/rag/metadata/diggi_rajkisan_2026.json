@@ -1,0 +1,66 @@
+{
+  "document_id": "diggi_rajkisan_2026",
+  "title": "डिग्गी - Diggi Construction Subsidy Scheme",
+  "institution": "Agriculture Department, Government of Rajasthan",
+  "publisher": "Government of Rajasthan",
+  "source_url": "https://rajkisan.rajasthan.gov.in/Rajkisanweb/Kisan",
+  "document_type": "official_government_portal_scheme_page_snapshot",
+  "downloaded_on": "2026-10-31",
+  "language": ["Hindi", "English"],
+  "scheme_category": "agriculture_irrigation_subsidy",
+  "geographic_relevance": ["Rajasthan"],
+  "topics": [
+    "diggi construction",
+    "canal irrigation",
+    "water storage",
+    "subsidy",
+    "farmer eligibility",
+    "irrigated land requirement",
+    "application procedure",
+    "required documents",
+    "administrative approval",
+    "physical verification",
+    "drip irrigation",
+    "sprinkler irrigation",
+    "subsidy disbursement"
+  ],
+  "benefits_as_displayed": {
+    "minimum_capacity_litres": 400000,
+    "small_and_marginal_farmers": "85% of unit cost or maximum INR 340000, whichever is lower",
+    "other_farmers": "75% of unit cost or maximum INR 300000, whichever is lower"
+  },
+  "eligibility_summary": [
+    "Minimum 0.5 hectare irrigated cultivable agricultural land"
+  ],
+  "required_documents": [
+    "Aadhaar Card or Jan Aadhaar Card",
+    "Jamabandi copy not older than six months"
+  ],
+  "application_process": [
+    "Apply through Raj Kisan Sathi portal or nearby e-Mitra centre",
+    "Online application receipt is provided"
+  ],
+  "construction_conditions": [
+    "Construction must begin only after Agriculture Department administrative approval",
+    "Physical verification before and after construction",
+    "Drip or sprinkler set installation is compulsory",
+    "Subsidy is deposited directly into farmer bank account after construction according to prescribed standards"
+  ],
+  "validity_as_displayed": "Current financial year",
+  "limitations": [
+    "Portal snapshot does not include a separate government order or notification number",
+    "Current financial year validity must be verified at query time",
+    "Subsidy and eligibility must be rechecked against current official guidelines",
+    "Minimum capacity and construction standards must be preserved exactly"
+  ],
+  "safety_filters": {
+    "allow_scheme_information": true,
+    "allow_subsidy_information_with_source_context": true,
+    "require_current_verification_for_eligibility": true,
+    "require_current_verification_for_subsidy_amounts": true,
+    "never_collect_aadhaar_or_jan_aadhaar_in_chat": true,
+    "never_claim_application_approval": true
+  },
+  "ingestion_status": "approved_for_conditional_ingestion_with_safety_filters",
+  "notes": "Official Raj Kisan Sathi portal snapshot dated 31 October 2026. Preserve the minimum capacity, subsidy limits and construction conditions accurately. Do not infer additional eligibility conditions."
+}

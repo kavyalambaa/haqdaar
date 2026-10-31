@@ -1,0 +1,63 @@
+{
+  "document_id": "irrigation_pipeline_rajkisan_2026",
+  "title": "सिंचाई पाइपलाइन - Irrigation Pipeline Scheme",
+  "institution": "Agriculture Department, Government of Rajasthan",
+  "publisher": "Government of Rajasthan",
+  "source_url": "https://rajkisan.rajasthan.gov.in/Rajkisanweb/Kisan",
+  "document_type": "official_government_portal_scheme_page_snapshot",
+  "downloaded_on": "2026-10-31",
+  "language": ["Hindi", "English"],
+  "scheme_category": "agriculture_irrigation_subsidy",
+  "geographic_relevance": ["Rajasthan"],
+  "topics": [
+    "irrigation pipeline subsidy",
+    "scheme objective",
+    "farmer eligibility",
+    "small and marginal farmers",
+    "joint land ownership",
+    "joint water sources",
+    "application procedure",
+    "required documents",
+    "pipeline purchase conditions",
+    "department verification",
+    "subsidy disbursement"
+  ],
+  "benefits_as_displayed": {
+    "small_and_marginal_farmers": "60% of unit cost or maximum INR 18000, whichever is lower",
+    "other_farmers": "50% of unit cost or maximum INR 15000, whichever is lower"
+  },
+  "eligibility_summary": [
+    "Agricultural land must be owned in the farmer's name",
+    "Farmer must have an electricity, diesel or tractor-operated pump set on the well",
+    "Joint ownership and separate pipeline applications are subject to the conditions displayed on the portal"
+  ],
+  "required_documents": [
+    "Aadhaar Card or Jan Aadhaar Card",
+    "Land ownership record (Jamabandi) not older than six months"
+  ],
+  "application_process": [
+    "Apply through Raj Kisan Sathi portal or an e-Mitra centre",
+    "Online application receipt is provided",
+    "Purchase pipeline only after Agriculture Department approval",
+    "Purchase from a registered manufacturer or authorised dealer",
+    "Department verifies the pipeline after purchase",
+    "Subsidy is deposited directly into the farmer's bank account"
+  ],
+  "validity_as_displayed": "Current financial year",
+  "limitations": [
+    "Portal snapshot does not include a separate government order or notification number",
+    "Subsidy amounts and eligibility must be rechecked against current official guidelines before providing final advice",
+    "Current financial year validity must be verified at query time",
+    "Joint ownership conditions must not be generalized beyond the displayed wording"
+  ],
+  "safety_filters": {
+    "allow_scheme_information": true,
+    "allow_subsidy_information_with_source_context": true,
+    "require_current_verification_for_eligibility": true,
+    "require_current_verification_for_subsidy_amounts": true,
+    "never_collect_aadhaar_or_jan_aadhaar_in_chat": true,
+    "never_claim_application_approval": true
+  },
+  "ingestion_status": "approved_for_conditional_ingestion_with_safety_filters",
+  "notes": "Official Raj Kisan Sathi portal snapshot dated 31 October 2026. Preserve Hindi conditions and subsidy limits accurately. Do not infer eligibility beyond the displayed text."
+}

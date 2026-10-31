@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Test Sandbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .section {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 1px solid #ddd;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .btn-group button {
+            width: auto;
+            flex: 1;
+            cursor: pointer;
+        }
+        .btn-speak {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+        }
+        .btn-speak:hover {
+            background-color: #219150;
+        }
+        .btn-stop {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+        }
+        .btn-stop:hover {
+            background-color: #c0392b;
+        }
+        .btn-diag {
+            background-color: #8e44ad;
+            color: white;
+            border: none;
+        }
+        .btn-diag:hover {
+            background-color: #732d91;
+        }
+        .info-box {
+            margin-top: 15px;
+            padding: 10px;
+            background: #eef7ed;
+            border-left: 4px solid #27ae60;
+            font-size: 13px;
+        }
+        .warning-box {
+            margin-top: 15px;
+            padding: 10px;
+            background: #fdf2e9;
+            border-left: 4px solid #e67e22;
+            color: #d35400;
+            font-size: 13px;
+        }
+        .diag-box {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f4f6f7;
+            border: 1px solid #bdc3c7;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+        .diag-group {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+        }
+        .diag-group h4 {
+            margin: 0 0 8px 0;
+            color: #2c3e50;
+        }
+        .voice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 12px;
+        }
+        .voice-table th, .voice-table td {
+            border: 1px solid #ddd;
+            padding: 6px 8px;
+            text-align: left;
+        }
+        .voice-table th {
+            background-color: #eaeded;
+        }
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .badge-success { background: #d4edda; color: #155724; }
+        .badge-warning { background: #fff3cd; color: #856404; }
+        .badge-danger { background: #f8d7da; color: #721c24; }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Speech Sandbox Test</h1>
+
+    <!-- 1. Speech Recognition Section (STT) -->
+    <div class="section" id="stt-section">
+        <h2>1. Speech Recognition (STT)</h2>
+        <div class="form-group">
+            <label for="stt-lang">Recognition Language:</label>
+            <select id="stt-lang">
+                <option value="hi-IN">Hindi (hi-IN)</option>
+                <option value="mr-IN">Marathi (mr-IN)</option>
+                <option value="ta-IN">Tamil (ta-IN)</option>
+            </select>
+        </div>
+        <div class="btn-group">
+            <button id="stt-start-btn" style="background-color: #2980b9; color: white; border: none;">Start Recording</button>
+            <button id="stt-stop-btn" style="background-color: #7f8c8d; color: white; border: none;">Stop Recording</button>
+        </div>
+        <div class="form-group" style="margin-top: 15px;">
+            <label for="stt-transcript">Transcript Output:</label>
+            <textarea id="stt-transcript" readonly placeholder="Spoken text will appear here..."></textarea>
+        </div>
+    </div>
+
+    <!-- 2. Text-to-Speech Section (TTS) -->
+    <div class="section" id="tts-section">
+        <h2>2. Text-to-Speech Testing (TTS)</h2>
+        
+        <div class="form-group">
+            <label for="tts-lang">Select Language:</label>
+            <select id="tts-lang">
+                <option value="hi-IN">Hindi (hi-IN)</option>
+                <option value="mr-IN">Marathi (mr-IN)</option>
+                <option value="ta-IN">Tamil (ta-IN)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="tts-text">Sample Sentence:</label>
+            <textarea id="tts-text"></textarea>
+        </div>
+
+        <div class="btn-group">
+            <button id="tts-speak-btn" class="btn-speak">Speak</button>
+            <button id="tts-stop-btn" class="btn-stop">Stop Speaking</button>
+            <button id="tts-voices-btn" class="btn-diag">Show All Available Voices</button>
+        </div>
+
+        <div id="tts-voice-info" class="info-box hidden">
+            <strong>Selected Voice:</strong> <span id="tts-voice-name">-</span> (<span id="tts-voice-locale">-</span>)
+        </div>
+
+        <div id="tts-warning" class="warning-box hidden">
+            ⚠️ <strong>Warning:</strong> No matching voice found for the selected language locale (<span id="tts-target-locale">-</span>). Speech synthesis may fall back to default system voice or fail.
+        </div>
+
+        <!-- Diagnostic Panel -->
+        <div id="tts-diag-container" class="diag-box hidden">
+            <h3>TTS Diagnostics & Installed System Voices</h3>
+            
+            <div class="diag-group">
+                <h4>Target Locale Match Status</h4>
+                <div id="locale-match-summary"></div>
+            </div>
+
+            <div class="diag-group">
+                <h4>Grouped Target Voices (Hindi, Marathi, Tamil)</h4>
+                <div id="target-voices-list"></div>
+            </div>
+
+            <div class="diag-group">
+                <h4>All Installed System Voices (<span id="total-voice-count">0</span>)</h4>
+                <div id="all-voices-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* Speech Recognition (STT) Logic */
+        const sttLang = document.getElementById('stt-lang');
+        const sttStartBtn = document.getElementById('stt-start-btn');
+        const sttStopBtn = document.getElementById('stt-stop-btn');
+        const sttTranscript = document.getElementById('stt-transcript');
+
+        let recognition = null;
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.continuous = true;
+            recognition.interimResults = true;
+
+            recognition.onresult = (event) => {
+                let currentTranscript = '';
+                for (let i = event.resultIndex; i < event.results.length; i++) {
+                    currentTranscript += event.results[i][0].transcript;
+                }
+                sttTranscript.value = currentTranscript;
+            };
+
+            recognition.onerror = (event) => {
+                console.error('STT Error:', event.error);
+            };
+        }
+
+        sttStartBtn.addEventListener('click', () => {
+            if (recognition) {
+                recognition.lang = sttLang.value;
+                recognition.start();
+            } else {
+                alert('Speech Recognition is not supported in this browser.');
+            }
+        });
+
+        sttStopBtn.addEventListener('click', () => {
+            if (recognition) {
+                recognition.stop();
+            }
+        });
+
+        /* Text-to-Speech (TTS) Logic */
+        const sampleSentences = {
+            'hi-IN': 'नमस्ते, हकदार में आपका स्वागत है। मैं आपकी क्या सहायता कर सकता हूँ?',
+            'mr-IN': 'नमस्कार, हकदार मध्ये आपले स्वागत आहे। मी तुम्हाला कशी मदत करू शकतो?',
+            'ta-IN': 'வணக்கம், हकदार-க்கு உங்களை வரவேற்கிறோம். நான் உங்களுக்கு எவ்வாறு உதவ முடியும்?'
+        };
+
+        const ttsLangSelect = document.getElementById('tts-lang');
+        const ttsTextArea = document.getElementById('tts-text');
+        const ttsSpeakBtn = document.getElementById('tts-speak-btn');
+        const ttsStopBtn = document.getElementById('tts-stop-btn');
+        const ttsVoicesBtn = document.getElementById('tts-voices-btn');
+        const ttsVoiceInfo = document.getElementById('tts-voice-info');
+        const ttsVoiceName = document.getElementById('tts-voice-name');
+        const ttsVoiceLocale = document.getElementById('tts-voice-locale');
+        const ttsWarning = document.getElementById('tts-warning');
+        const ttsTargetLocale = document.getElementById('tts-target-locale');
+
+        const ttsDiagContainer = document.getElementById('tts-diag-container');
+        const localeMatchSummary = document.getElementById('locale-match-summary');
+        const targetVoicesList = document.getElementById('target-voices-list');
+        const allVoicesList = document.getElementById('all-voices-list');
+        const totalVoiceCount = document.getElementById('total-voice-count');
+
+        let voices = [];
+        let isDiagVisible = false;
+
+        function updateVoices() {
+            if ('speechSynthesis' in window) {
+                voices = window.speechSynthesis.getVoices();
+                updateVoiceSelection();
+                if (isDiagVisible) {
+                    renderDiagnostics();
+                }
+            }
+        }
+
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.onvoiceschanged = updateVoices;
+            updateVoices();
+        }
+
+        function getMatchingVoice(targetLang) {
+            if (!voices || voices.length === 0) {
+                voices = window.speechSynthesis.getVoices();
+            }
+            const langPrefix = targetLang.split('-')[0].toLowerCase();
+            
+            // Exact locale match (hi-IN, mr-IN, ta-IN)
+            let voice = voices.find(v => v.lang.replace('_', '-').toLowerCase() === targetLang.toLowerCase());
+            
+            // Prefix match fallback (hi, mr, ta)
+            if (!voice) {
+                voice = voices.find(v => v.lang.replace('_', '-').toLowerCase().startsWith(langPrefix));
+            }
+
+            return voice;
+        }
+
+        function updateVoiceSelection() {
+            const selectedLang = ttsLangSelect.value;
+            const matchingVoice = getMatchingVoice(selectedLang);
+
+            if (matchingVoice) {
+                ttsVoiceName.textContent = matchingVoice.name;
+                ttsVoiceLocale.textContent = matchingVoice.lang;
+                ttsVoiceInfo.classList.remove('hidden');
+                ttsWarning.classList.add('hidden');
+            } else {
+                ttsTargetLocale.textContent = selectedLang;
+                ttsVoiceInfo.classList.add('hidden');
+                ttsWarning.classList.remove('hidden');
+            }
+        }
+
+        function updateSampleSentence() {
+            const selectedLang = ttsLangSelect.value;
+            ttsTextArea.value = sampleSentences[selectedLang] || '';
+            updateVoiceSelection();
+        }
+
+        function renderDiagnostics() {
+            if (!('speechSynthesis' in window)) {
+                localeMatchSummary.innerHTML = '<p class="badge badge-danger">SpeechSynthesis API unsupported in this browser.</p>';
+                return;
+            }
+
+            voices = window.speechSynthesis.getVoices();
+            totalVoiceCount.textContent = voices.length;
+
+            const targetLocales = [
+                { locale: 'hi-IN', prefix: 'hi', label: 'Hindi (hi-IN)' },
+                { locale: 'mr-IN', prefix: 'mr', label: 'Marathi (mr-IN)' },
+                { locale: 'ta-IN', prefix: 'ta', label: 'Tamil (ta-IN)' }
+            ];
+
+            // 1. Locale Match Summary
+            let summaryHTML = '<table class="voice-table"><thead><tr><th>Target Language</th><th>Exact Locale Match</th><th>Prefix Match</th><th>Status</th></tr></thead><tbody>';
+            
+            targetLocales.forEach(item => {
+                const exactMatch = voices.find(v => v.lang.replace('_', '-').toLowerCase() === item.locale.toLowerCase());
+                const prefixMatch = voices.find(v => v.lang.replace('_', '-').toLowerCase().startsWith(item.prefix));
+
+                let statusBadge = '<span class="badge badge-danger">No Match</span>';
+                if (exactMatch) {
+                    statusBadge = '<span class="badge badge-success">Exact Match Available</span>';
+                } else if (prefixMatch) {
+                    statusBadge = '<span class="badge badge-warning">Prefix Match Only</span>';
+                }
+
+                summaryHTML += `<tr>
+                    <td><strong>${item.label}</strong></td>
+                    <td>${exactMatch ? exactMatch.name + ' (' + exactMatch.lang + ')' : 'None'}</td>
+                    <td>${prefixMatch ? prefixMatch.name + ' (' + prefixMatch.lang + ')' : 'None'}</td>
+                    <td>${statusBadge}</td>
+                </tr>`;
+            });
+            summaryHTML += '</tbody></table>';
+            localeMatchSummary.innerHTML = summaryHTML;
+
+            // 2. Grouped Target Voices
+            let targetGroupHTML = '';
+            targetLocales.forEach(item => {
+                const matchedVoices = voices.filter(v => v.lang.replace('_', '-').toLowerCase().startsWith(item.prefix));
+                targetGroupHTML += `<h5>${item.label} Voices (${matchedVoices.length})</h5>`;
+                if (matchedVoices.length > 0) {
+                    targetGroupHTML += '<table class="voice-table"><thead><tr><th>Voice Name</th><th>Lang Locale</th><th>Default System Voice</th></tr></thead><tbody>';
+                    matchedVoices.forEach(v => {
+                        targetGroupHTML += `<tr><td>${v.name}</td><td>${v.lang}</td><td>${v.default ? 'Yes' : 'No'}</td></tr>`;
+                    });
+                    targetGroupHTML += '</tbody></table>';
+                } else {
+                    targetGroupHTML += `<p style="color: #7f8c8d; font-style: italic; margin-top: 4px;">No ${item.label} voices detected on this device.</p>`;
+                }
+            });
+            targetVoicesList.innerHTML = targetGroupHTML;
+
+            // 3. All Installed Voices Table
+            if (voices.length > 0) {
+                let allTableHTML = '<table class="voice-table"><thead><tr><th>#</th><th>Voice Name</th><th>Lang Locale</th><th>Default</th></tr></thead><tbody>';
+                voices.forEach((v, index) => {
+                    allTableHTML += `<tr>
+                        <td>${index + 1}</td>
+                        <td>${v.name}</td>
+                        <td>${v.lang}</td>
+                        <td>${v.default ? 'Yes' : 'No'}</td>
+                    </tr>`;
+                });
+                allTableHTML += '</tbody></table>';
+                allVoicesList.innerHTML = allTableHTML;
+            } else {
+                allVoicesList.innerHTML = '<p style="color: #7f8c8d; font-style: italic;">No system voices returned by window.speechSynthesis.getVoices().</p>';
+            }
+        }
+
+        ttsLangSelect.addEventListener('change', updateSampleSentence);
+
+        ttsVoicesBtn.addEventListener('click', () => {
+            isDiagVisible = !isDiagVisible;
+            if (isDiagVisible) {
+                ttsDiagContainer.classList.remove('hidden');
+                ttsVoicesBtn.textContent = 'Hide Available Voices';
+                renderDiagnostics();
+            } else {
+                ttsDiagContainer.classList.add('hidden');
+                ttsVoicesBtn.textContent = 'Show All Available Voices';
+            }
+        });
+
+        ttsSpeakBtn.addEventListener('click', () => {
+            if (!('speechSynthesis' in window)) {
+                alert('Text-to-Speech is not supported in this browser.');
+                return;
+            }
+
+            window.speechSynthesis.cancel();
+
+            const text = ttsTextArea.value.trim();
+            if (!text) return;
+
+            const selectedLang = ttsLangSelect.value;
+            const matchingVoice = getMatchingVoice(selectedLang);
+
+            if (!matchingVoice) {
+                ttsTargetLocale.textContent = selectedLang;
+                ttsVoiceInfo.classList.add('hidden');
+                ttsWarning.classList.remove('hidden');
+                alert(`Cannot speak: No installed TTS voice found for ${selectedLang}. Please install or enable a ${selectedLang} voice package on your OS/browser.`);
+                return;
+            }
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = selectedLang;
+            utterance.voice = matchingVoice;
+
+            utterance.onstart = () => {
+                ttsSpeakBtn.disabled = true;
+            };
+
+            utterance.onend = utterance.onerror = () => {
+                ttsSpeakBtn.disabled = false;
+            };
+
+            window.speechSynthesis.speak(utterance);
+        });
+
+        ttsStopBtn.addEventListener('click', () => {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                ttsSpeakBtn.disabled = false;
+            }
+        });
+
+        updateSampleSentence();
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "document_id": "mustard_icar_drmr_crop_technologies",
+  "title": "Technologies Developed - Crop Improvement, Crop Production and Crop Protection",
+  "institution": "ICAR-Indian Institute of Rapeseed-Mustard Research",
+  "publisher": "Indian Council of Agricultural Research",
+  "source_url": "https://drmr.res.in/technologies_developed.php",
+  "location": "Sewar, Bharatpur, Rajasthan, India",
+  "document_type": "official_institutional_webpage_snapshot",
+  "downloaded_on": "2026-10-31",
+  "publication_date": null,
+  "copyright_year_displayed": 2018,
+  "language": "English",
+  "crop": "rapeseed-mustard",
+  "crop_aliases": ["mustard", "Indian mustard", "Brassica juncea"],
+  "geographic_relevance": ["Rajasthan", "Haryana", "Uttar Pradesh", "India"],
+  "topics": [
+    "crop improvement",
+    "varieties",
+    "tillage",
+    "raised bed cultivation",
+    "seed treatment",
+    "nutrient management",
+    "irrigation",
+    "weed management",
+    "crop rotation",
+    "pest management",
+    "disease management"
+  ],
+  "limitations": [
+    "Webpage snapshot with no confirmed publication or last-updated date",
+    "Some recommendations may be historical",
+    "Not a complete season-specific mustard cultivation manual",
+    "Variety and agronomic recommendations require current regional verification",
+    "Chemical crop-protection recommendations require current label and official advisory verification"
+  ],
+  "safety_filters": {
+    "allow_general_agronomy": true,
+    "allow_variety_information_with_verification": true,
+    "allow_chemical_dosage_without_current_verification": false,
+    "allow_pesticide_recommendations_without_current_verification": false,
+    "require_current_official_verification_for_chemical_advice": true
+  },
+  "ingestion_status": "approved_for_conditional_ingestion_with_safety_filters",
+  "notes": "Official ICAR-DRMR institutional technology page. Use as supplementary mustard knowledge, not as the sole source for current farmer recommendations."
+}

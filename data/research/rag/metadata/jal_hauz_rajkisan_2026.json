@@ -1,0 +1,66 @@
+{
+  "document_id": "jal_hauz_rajkisan_2026",
+  "title": "जल हौज - Jal Hauz Construction Subsidy Scheme",
+  "institution": "Agriculture Department, Government of Rajasthan",
+  "publisher": "Government of Rajasthan",
+  "source_url": "https://rajkisan.rajasthan.gov.in/Rajkisanweb/Kisan",
+  "document_type": "official_government_portal_scheme_page_snapshot",
+  "downloaded_on": "2026-10-31",
+  "language": ["Hindi", "English"],
+  "scheme_category": "agriculture_water_storage_subsidy",
+  "geographic_relevance": ["Rajasthan"],
+  "topics": [
+    "Jal Hauz",
+    "water storage tank",
+    "irrigation water storage",
+    "subsidy",
+    "farmer eligibility",
+    "land requirement",
+    "irrigation source",
+    "application procedure",
+    "required documents",
+    "administrative approval",
+    "physical verification",
+    "subsidy disbursement"
+  ],
+  "benefits_as_displayed": {
+    "minimum_capacity_cubic_metres": 100,
+    "minimum_capacity_litres": 100000,
+    "all_farmer_categories": "60% of unit cost or maximum INR 90000, whichever is lower"
+  },
+  "eligibility_summary": [
+    "Minimum 0.5 hectare cultivable agricultural land in the farmer's name",
+    "Irrigation source and means must be available"
+  ],
+  "required_documents": [
+    "Aadhaar Card or Jan Aadhaar Card",
+    "Jamabandi copy not older than six months"
+  ],
+  "application_process": [
+    "Apply through Raj Kisan Sathi portal or nearby e-Mitra centre",
+    "Online application receipt is provided"
+  ],
+  "construction_conditions": [
+    "Administrative approval from Agriculture Department is required after application",
+    "Approval information is communicated through mobile message or Agriculture Supervisor",
+    "Physical verification before and after construction",
+    "Subsidy is deposited directly into the farmer's bank account"
+  ],
+  "validity_as_displayed": "Current financial year",
+  "limitations": [
+    "No separate government order or notification number is included in the snapshot",
+    "Current subsidy and eligibility must be verified against current official guidelines",
+    "Current financial year validity must be checked at query time",
+    "Do not infer tank dimensions or construction specifications not displayed"
+  ],
+  "safety_filters": {
+    "allow_scheme_information": true,
+    "allow_subsidy_information_with_source_context": true,
+    "require_current_verification_for_eligibility": true,
+    "require_current_verification_for_subsidy_amounts": true,
+    "never_collect_aadhaar_or_jan_aadhaar_in_chat": true,
+    "never_claim_application_approval": true
+  },
+  "ingestion_status": "approved_for_conditional_ingestion_with_safety_filters",
+  "notes": "Official Raj Kisan Sathi portal snapshot dated 31 October 2026. Preserve the minimum capacity, subsidy cap and eligibility wording accurately. Do not infer additional conditions."
+}

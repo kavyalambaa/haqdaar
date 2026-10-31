@@ -1,0 +1,25 @@
+{
+  "purpose": "UNSEEN TEST SET. Collected independently by team members and verified by native speakers. NEVER use for prompt tuning or training.",
+  "created_on": "2026-10-31",
+  "total_cases_target": 40,
+  "cases": [
+    {
+      "id": "unseen_01",
+      "text": "[Insert native Hindi/Hinglish utterance collected independently]",
+      "collected_by": "[Team Member Name]",
+      "verified_by_native_speaker": false,
+      "expected": {
+        "age": null,
+        "gender": null,
+        "occupation": null,
+        "land": null,
+        "is_pregnant": null,
+        "pregnancy_month": null,
+        "pregnant_person": null,
+        "ration_card_type": null,
+        "state": null,
+        "district": null
+      }
+    }
+  ]
+}

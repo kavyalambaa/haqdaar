@@ -1,0 +1,42 @@
+{
+  "document_id": "mustard_icar_drmr_varieties",
+  "title": "Rapeseed-Mustard Varieties",
+  "institution": "ICAR-Indian Institute of Rapeseed-Mustard Research",
+  "publisher": "Indian Council of Agricultural Research",
+  "source_url": "https://www.drmr.res.in/rm_varieties.php",
+  "location": "Sewar, Bharatpur, Rajasthan, India",
+  "document_type": "official_institutional_webpage_snapshot",
+  "downloaded_on": "2026-10-31",
+  "publication_date": null,
+  "copyright_year_displayed": 2018,
+  "language": "English",
+  "crop": "rapeseed-mustard",
+  "crop_aliases": ["mustard", "Indian mustard", "Brassica juncea"],
+  "geographic_relevance": ["Rajasthan", "Northern Rajasthan", "India"],
+  "topics": [
+    "mustard varieties",
+    "variety notification years",
+    "days to maturity",
+    "oil content",
+    "average seed yield",
+    "agro-ecological zones",
+    "variety-specific characteristics"
+  ],
+  "limitations": [
+    "Webpage snapshot with no confirmed last-updated date",
+    "Copyright footer displays 2018 despite listing varieties notified through 2025",
+    "Zone-level recommendations do not establish suitability for every Rajasthan district",
+    "Yield figures are reported averages and are not guaranteed farm yields",
+    "Current variety availability and recommendations require verification"
+  ],
+  "safety_filters": {
+    "allow_variety_information": true,
+    "allow_maturity_information": true,
+    "allow_oil_content_information": true,
+    "allow_yield_information_with_context": true,
+    "require_district_and_zone_context": true,
+    "require_current_official_verification_for_variety_recommendations": true
+  },
+  "ingestion_status": "approved_for_conditional_ingestion_with_safety_filters",
+  "notes": "Official ICAR-DRMR variety webpage snapshot. Preserve variety names, notification years, maturity, yield and recommended zones exactly as published. Do not infer universal district suitability."
+}

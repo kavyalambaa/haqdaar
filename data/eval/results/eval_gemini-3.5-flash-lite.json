@@ -1,0 +1,739 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "timestamp": "2026-10-31 00:11:55",
+  "total_cases_attempted": 14,
+  "successful_cases": 14,
+  "failed_cases": 0,
+  "api_errors": 0,
+  "fixed_10_field_protocol": {
+    "cases_fully_correct": 4,
+    "total_cases": 14,
+    "fields_correct": 122,
+    "total_fields_evaluated": 140,
+    "field_accuracy_pct": 87.14
+  },
+  "sparse_field_protocol": {
+    "non_empty_cases_fully_correct": 3,
+    "total_non_empty_cases": 13,
+    "empty_expected_cases": 1,
+    "fields_correct": 9,
+    "total_fields_evaluated": 26,
+    "field_accuracy_pct": 34.62
+  },
+  "cases": [
+    {
+      "id": "dev01",
+      "status": "SUCCESS",
+      "latency_sec": 1.741,
+      "fixed_10_field_eval": {
+        "correct_fields": 8,
+        "total_fields": 10,
+        "fully_correct": false,
+        "failures": {
+          "occupation": {
+            "expected": [
+              "farmer",
+              "cultivator"
+            ],
+            "predicted": null
+          },
+          "land": {
+            "expected": {
+              "value": 2,
+              "unit": "bigha"
+            },
+            "predicted": null
+          }
+        }
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": false,
+        "correct_fields": 0,
+        "total_fields": 2,
+        "fully_correct": false,
+        "failures": {
+          "occupation": {
+            "expected": [
+              "farmer",
+              "cultivator"
+            ],
+            "predicted": null
+          },
+          "land": {
+            "expected": {
+              "value": 2,
+              "unit": "bigha"
+            },
+            "predicted": null
+          }
+        }
+      },
+      "prediction": {
+        "state": null,
+        "district": null,
+        "caste_category": null,
+        "land_holding_ha": 0.5,
+        "farmer_type": "Small",
+        "annual_income": null,
+        "gender": null,
+        "age": null,
+        "is_taxpayer": null,
+        "occupation_type": "Farming"
+      },
+      "expected": {
+        "occupation": [
+          "farmer",
+          "cultivator"
+        ],
+        "land": {
+          "value": 2,
+          "unit": "bigha"
+        }
+      }
+    },
+    {
+      "id": "dev02",
+      "status": "SUCCESS",
+      "latency_sec": 1.499,
+      "fixed_10_field_eval": {
+        "correct_fields": 10,
+        "total_fields": 10,
+        "fully_correct": true,
+        "failures": {}
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": false,
+        "correct_fields": 1,
+        "total_fields": 1,
+        "fully_correct": true,
+        "failures": {}
+      },
+      "prediction": {
+        "state": null,
+        "district": null,
+        "caste_category": null,
+        "land_holding_ha": null,
+        "farmer_type": null,
+        "annual_income": null,
+        "gender": null,
+        "age": 45,
+        "is_taxpayer": null,
+        "occupation_type": null
+      },
+      "expected": {
+        "age": 45
+      }
+    },
+    {
+      "id": "dev03",
+      "status": "SUCCESS",
+      "latency_sec": 1.181,
+      "fixed_10_field_eval": {
+        "correct_fields": 7,
+        "total_fields": 10,
+        "fully_correct": false,
+        "failures": {
+          "is_pregnant": {
+            "expected": true,
+            "predicted": null
+          },
+          "pregnancy_month": {
+            "expected": 3,
+            "predicted": null
+          },
+          "pregnant_person": {
+            "expected": "wife",
+            "predicted": null
+          }
+        }
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": false,
+        "correct_fields": 0,
+        "total_fields": 3,
+        "fully_correct": false,
+        "failures": {
+          "is_pregnant": {
+            "expected": true,
+            "predicted": null
+          },
+          "pregnancy_month": {
+            "expected": 3,
+            "predicted": null
+          },
+          "pregnant_person": {
+            "expected": "wife",
+            "predicted": null
+          }
+        }
+      },
+      "prediction": {
+        "state": null,
+        "district": null,
+        "caste_category": null,
+        "land_holding_ha": null,
+        "farmer_type": null,
+        "annual_income": null,
+        "gender": null,
+        "age": null,
+        "is_taxpayer": null,
+        "occupation_type": null
+      },
+      "expected": {
+        "is_pregnant": true,
+        "pregnancy_month": 3,
+        "pregnant_person": "wife"
+      }
+    },
+    {
+      "id": "dev04",
+      "status": "SUCCESS",
+      "latency_sec": 1.448,
+      "fixed_10_field_eval": {
+        "correct_fields": 9,
+        "total_fields": 10,
+        "fully_correct": false,
+        "failures": {
+          "ration_card_type": {
+            "expected": [
+              "पीला",
+              "yellow"
+            ],
+            "predicted": null
+          }
+        }
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": false,
+        "correct_fields": 0,
+        "total_fields": 1,
+        "fully_correct": false,
+        "failures": {
+          "ration_card_type": {
+            "expected": [
+              "पीला",
+              "yellow"
+            ],
+            "predicted": null
+          }
+        }
+      },
+      "prediction": {
+        "state": null,
+        "district": null,
+        "caste_category": null,
+        "land_holding_ha": null,
+        "farmer_type": null,
+        "annual_income": null,
+        "gender": null,
+        "age": null,
+        "is_taxpayer": null,
+        "occupation_type": null
+      },
+      "expected": {
+        "ration_card_type": [
+          "पीला",
+          "yellow"
+        ]
+      }
+    },
+    {
+      "id": "dev05",
+      "status": "SUCCESS",
+      "latency_sec": 1.426,
+      "fixed_10_field_eval": {
+        "correct_fields": 10,
+        "total_fields": 10,
+        "fully_correct": true,
+        "failures": {}
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": false,
+        "correct_fields": 2,
+        "total_fields": 2,
+        "fully_correct": true,
+        "failures": {}
+      },
+      "prediction": {
+        "state": "Rajasthan",
+        "district": "Sikar",
+        "caste_category": null,
+        "land_holding_ha": null,
+        "farmer_type": null,
+        "annual_income": null,
+        "gender": null,
+        "age": null,
+        "is_taxpayer": null,
+        "occupation_type": null
+      },
+      "expected": {
+        "state": [
+          "राजस्थान",
+          "Rajasthan"
+        ],
+        "district": [
+          "सीकर",
+          "Sikar"
+        ]
+      }
+    },
+    {
+      "id": "dev06",
+      "status": "SUCCESS",
+      "latency_sec": 1.219,
+      "fixed_10_field_eval": {
+        "correct_fields": 7,
+        "total_fields": 10,
+        "fully_correct": false,
+        "failures": {
+          "is_pregnant": {
+            "expected": true,
+            "predicted": null
+          },
+          "pregnancy_month": {
+            "expected": 5,
+            "predicted": null
+          },
+          "pregnant_person": {
+            "expected": "self",
+            "predicted": null
+          }
+        }
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": false,
+        "correct_fields": 2,
+        "total_fields": 5,
+        "fully_correct": false,
+        "failures": {
+          "is_pregnant": {
+            "expected": true,
+            "predicted": null
+          },
+          "pregnancy_month": {
+            "expected": 5,
+            "predicted": null
+          },
+          "pregnant_person": {
+            "expected": "self",
+            "predicted": null
+          }
+        }
+      },
+      "prediction": {
+        "state": null,
+        "district": null,
+        "caste_category": null,
+        "land_holding_ha": null,
+        "farmer_type": null,
+        "annual_income": null,
+        "gender": "Female",
+        "age": 28,
+        "is_taxpayer": null,
+        "occupation_type": null
+      },
+      "expected": {
+        "age": 28,
+        "gender": "female",
+        "is_pregnant": true,
+        "pregnancy_month": 5,
+        "pregnant_person": "self"
+      }
+    },
+    {
+      "id": "dev07",
+      "status": "SUCCESS",
+      "latency_sec": 1.153,
+      "fixed_10_field_eval": {
+        "correct_fields": 8,
+        "total_fields": 10,
+        "fully_correct": false,
+        "failures": {
+          "occupation": {
+            "expected": [
+              "labourer",
+              "laborer"
+            ],
+            "predicted": null
+          },
+          "land": {
+            "expected": {
+              "value": 0,
+              "unit": null
+            },
+            "predicted": null
+          }
+        }
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": false,
+        "correct_fields": 0,
+        "total_fields": 2,
+        "fully_correct": false,
+        "failures": {
+          "occupation": {
+            "expected": [
+              "labourer",
+              "laborer"
+            ],
+            "predicted": null
+          },
+          "land": {
+            "expected": {
+              "value": 0,
+              "unit": null
+            },
+            "predicted": null
+          }
+        }
+      },
+      "prediction": {
+        "state": null,
+        "district": null,
+        "caste_category": null,
+        "land_holding_ha": 0.0,
+        "farmer_type": "Landless",
+        "annual_income": null,
+        "gender": null,
+        "age": null,
+        "is_taxpayer": null,
+        "occupation_type": "Laborer"
+      },
+      "expected": {
+        "occupation": [
+          "labourer",
+          "laborer"
+        ],
+        "land": {
+          "value": 0,
+          "unit": null
+        }
+      }
+    },
+    {
+      "id": "dev08",
+      "status": "SUCCESS",
+      "latency_sec": 1.133,
+      "fixed_10_field_eval": {
+        "correct_fields": 10,
+        "total_fields": 10,
+        "fully_correct": true,
+        "failures": {}
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": false,
+        "correct_fields": 1,
+        "total_fields": 1,
+        "fully_correct": true,
+        "failures": {}
+      },
+      "prediction": {
+        "state": null,
+        "district": null,
+        "caste_category": null,
+        "land_holding_ha": null,
+        "farmer_type": null,
+        "annual_income": null,
+        "gender": null,
+        "age": 60,
+        "is_taxpayer": null,
+        "occupation_type": null
+      },
+      "expected": {
+        "age": 60
+      }
+    },
+    {
+      "id": "dev09",
+      "status": "SUCCESS",
+      "latency_sec": 1.764,
+      "fixed_10_field_eval": {
+        "correct_fields": 8,
+        "total_fields": 10,
+        "fully_correct": false,
+        "failures": {
+          "land": {
+            "expected": {
+              "value": 2,
+              "unit": "bigha"
+            },
+            "predicted": null
+          },
+          "state": {
+            "expected": null,
+            "predicted": "Rajasthan"
+          }
+        }
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": false,
+        "correct_fields": 2,
+        "total_fields": 3,
+        "fully_correct": false,
+        "failures": {
+          "land": {
+            "expected": {
+              "value": 2,
+              "unit": "bigha"
+            },
+            "predicted": null
+          }
+        }
+      },
+      "prediction": {
+        "state": "Rajasthan",
+        "district": "Sikar",
+        "caste_category": null,
+        "land_holding_ha": 0.5,
+        "farmer_type": "Marginal",
+        "annual_income": null,
+        "gender": null,
+        "age": 45,
+        "is_taxpayer": null,
+        "occupation_type": "Farmer"
+      },
+      "expected": {
+        "age": 45,
+        "land": {
+          "value": 2,
+          "unit": "bigha"
+        },
+        "district": [
+          "सीकर",
+          "Sikar"
+        ]
+      }
+    },
+    {
+      "id": "dev10",
+      "status": "SUCCESS",
+      "latency_sec": 1.163,
+      "fixed_10_field_eval": {
+        "correct_fields": 9,
+        "total_fields": 10,
+        "fully_correct": false,
+        "failures": {
+          "land": {
+            "expected": {
+              "value": 5,
+              "unit": [
+                "kattha",
+                "katha"
+              ]
+            },
+            "predicted": null
+          }
+        }
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": false,
+        "correct_fields": 0,
+        "total_fields": 1,
+        "fully_correct": false,
+        "failures": {
+          "land": {
+            "expected": {
+              "value": 5,
+              "unit": [
+                "kattha",
+                "katha"
+              ]
+            },
+            "predicted": null
+          }
+        }
+      },
+      "prediction": {
+        "state": null,
+        "district": null,
+        "caste_category": null,
+        "land_holding_ha": 0.17,
+        "farmer_type": "Marginal",
+        "annual_income": null,
+        "gender": null,
+        "age": null,
+        "is_taxpayer": null,
+        "occupation_type": null
+      },
+      "expected": {
+        "land": {
+          "value": 5,
+          "unit": [
+            "kattha",
+            "katha"
+          ]
+        }
+      }
+    },
+    {
+      "id": "dev11",
+      "status": "SUCCESS",
+      "latency_sec": 1.288,
+      "fixed_10_field_eval": {
+        "correct_fields": 10,
+        "total_fields": 10,
+        "fully_correct": true,
+        "failures": {}
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": true,
+        "correct_fields": 0,
+        "total_fields": 0,
+        "fully_correct": true,
+        "failures": {}
+      },
+      "prediction": {
+        "state": null,
+        "district": null,
+        "caste_category": null,
+        "land_holding_ha": null,
+        "farmer_type": null,
+        "annual_income": null,
+        "gender": null,
+        "age": null,
+        "is_taxpayer": null,
+        "occupation_type": null
+      },
+      "expected": {}
+    },
+    {
+      "id": "dev12",
+      "status": "SUCCESS",
+      "latency_sec": 1.06,
+      "fixed_10_field_eval": {
+        "correct_fields": 8,
+        "total_fields": 10,
+        "fully_correct": false,
+        "failures": {
+          "is_pregnant": {
+            "expected": true,
+            "predicted": null
+          },
+          "pregnant_person": {
+            "expected": "other",
+            "predicted": null
+          }
+        }
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": false,
+        "correct_fields": 0,
+        "total_fields": 2,
+        "fully_correct": false,
+        "failures": {
+          "is_pregnant": {
+            "expected": true,
+            "predicted": null
+          },
+          "pregnant_person": {
+            "expected": "other",
+            "predicted": null
+          }
+        }
+      },
+      "prediction": {
+        "state": null,
+        "district": null,
+        "caste_category": null,
+        "land_holding_ha": null,
+        "farmer_type": null,
+        "annual_income": null,
+        "gender": null,
+        "age": null,
+        "is_taxpayer": null,
+        "occupation_type": null
+      },
+      "expected": {
+        "is_pregnant": true,
+        "pregnant_person": "other"
+      }
+    },
+    {
+      "id": "dev13",
+      "status": "SUCCESS",
+      "latency_sec": 1.707,
+      "fixed_10_field_eval": {
+        "correct_fields": 9,
+        "total_fields": 10,
+        "fully_correct": false,
+        "failures": {
+          "occupation": {
+            "expected": "farmer",
+            "predicted": null
+          }
+        }
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": false,
+        "correct_fields": 1,
+        "total_fields": 2,
+        "fully_correct": false,
+        "failures": {
+          "occupation": {
+            "expected": "farmer",
+            "predicted": null
+          }
+        }
+      },
+      "prediction": {
+        "state": null,
+        "district": null,
+        "caste_category": null,
+        "land_holding_ha": null,
+        "farmer_type": null,
+        "annual_income": null,
+        "gender": null,
+        "age": 52,
+        "is_taxpayer": null,
+        "occupation_type": "Farmer"
+      },
+      "expected": {
+        "age": 52,
+        "occupation": "farmer"
+      }
+    },
+    {
+      "id": "dev14",
+      "status": "SUCCESS",
+      "latency_sec": 1.305,
+      "fixed_10_field_eval": {
+        "correct_fields": 9,
+        "total_fields": 10,
+        "fully_correct": false,
+        "failures": {
+          "occupation": {
+            "expected": "student",
+            "predicted": null
+          }
+        }
+      },
+      "sparse_annotated_eval": {
+        "is_empty_expected": false,
+        "correct_fields": 0,
+        "total_fields": 1,
+        "fully_correct": false,
+        "failures": {
+          "occupation": {
+            "expected": "student",
+            "predicted": null
+          }
+        }
+      },
+      "prediction": {
+        "state": null,
+        "district": null,
+        "caste_category": null,
+        "land_holding_ha": null,
+        "farmer_type": null,
+        "annual_income": null,
+        "gender": null,
+        "age": null,
+        "is_taxpayer": null,
+        "occupation_type": "Student"
+      },
+      "expected": {
+        "occupation": "student"
+      }
+    }
+  ]
+}

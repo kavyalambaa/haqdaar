@@ -1,0 +1,31 @@
+{
+  "scheme_id": "pm_kisan",
+  "name_en": "PM Kisan Samman Nidhi",
+  "status": "VERIFIED_AGAINST_GUIDELINES_REV_2020_03_29",
+  "last_verified": "2026-10-30",
+  "family_definition": "husband, wife and minor children only (parents and adult children do not count)",
+  "known_limits": [
+    "Amendment in Operational Guidelines section not readable (needs CSC login), so later changes are not reviewed",
+    "Guidelines say the 01-02-2019 cut-off applies 'for next 5 years'. Current wording not confirmed",
+    "NRI exclusion (new beneficiaries) is not asked",
+    "State government verifies land records. The app gives an indication, not a final decision"
+  ],
+  "benefit": "Rs 6000 per year per family in three instalments of Rs 2000 (PIB FAQ Nov 2021, Guidelines clause 10.1)",
+  "documents_needed": ["Aadhaar number", "Bank account number and IFSC (Aadhaar-seeded)", "Land ownership records in the family's name"],
+  "sources": [
+    {"id": "s1", "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1575610", "publisher": "PIB, Ministry of Agriculture and Farmers Welfare", "date_on_page": "2019-06-25"},
+    {"id": "s2", "url": "https://pmkisan.gov.in/", "publisher": "PM-KISAN portal home page", "date_on_page": null},
+    {"id": "s3", "url": "https://pmkisan.gov.in/Documents/RevisedPM-KISANOperationalGuidelines(English).pdf", "publisher": "PM-KISAN portal, Operational Guidelines", "date_on_page": "2020-03-29"},
+    {"id": "s4", "url": "https://fw.pmkisan.gov.in/Documents/ClarificationsrelatingtoClauses.pdf", "publisher": "PM-KISAN portal, Clarification to Operational Guidelines", "date_on_page": null}
+  ],
+  "rules": [
+    {"rule_id": "owns_land", "field": "land.value", "op": "gt", "value": 0, "on_null": "unknown", "source": "s3", "enabled": true, "note": "clause 1 and 3. No area threshold in the 2020 guidelines"},
+    {"rule_id": "not_constitutional_post", "field": "family_constitutional_post", "op": "is_false", "on_null": "unknown", "source": "s3", "enabled": true},
+    {"rule_id": "not_minister_mp_mla", "field": "family_elected_office", "op": "is_false", "on_null": "unknown", "source": "s3", "enabled": true},
+    {"rule_id": "not_govt_employee", "field": "family_govt_employee", "op": "is_false", "on_null": "unknown", "source": "s3", "enabled": true, "note": "MTS/Class IV/Group D are excepted"},
+    {"rule_id": "not_high_pension", "field": "family_pension_10k_plus", "op": "is_false", "on_null": "unknown", "source": "s3", "enabled": true},
+    {"rule_id": "not_income_tax_payer", "field": "family_income_tax_payer", "op": "is_false", "on_null": "unknown", "source": "s3", "enabled": true},
+    {"rule_id": "not_registered_professional", "field": "family_registered_professional", "op": "is_false", "on_null": "unknown", "source": "s3", "enabled": true},
+    {"rule_id": "land_source_ok", "field": "land_source", "op": "in", "value": ["before_2019_02_01", "inheritance"], "on_null": "unknown", "source": "s4", "enabled": true, "note": "values: before_2019_02_01 | inheritance | purchase_gift_partition_after"}
+  ]
+}

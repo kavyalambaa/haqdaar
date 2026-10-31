@@ -1,0 +1,51 @@
+{
+  "document_id": "wheat_icar_iiwbr_technologies_2026",
+  "title": "ICAR-IIWBR Technology Developed - Wheat and Barley Varieties and Certified Technologies",
+  "institution": "ICAR-Indian Institute of Wheat and Barley Research",
+  "publisher": "Indian Council of Agricultural Research",
+  "source_url": "https://iiwbr.org.in/technology-developed/",
+  "location": "Karnal, Haryana, India",
+  "document_type": "official_institutional_webpage_snapshot",
+  "downloaded_on": "2026-10-31",
+  "last_reviewed_on": "2026-09-15",
+  "language": "English",
+  "crop": ["wheat", "barley"],
+  "geographic_relevance": [
+    "Rajasthan",
+    "Punjab",
+    "Haryana",
+    "Delhi",
+    "Uttar Pradesh",
+    "Madhya Pradesh",
+    "India"
+  ],
+  "topics": [
+    "wheat varieties",
+    "barley varieties",
+    "agro-climatic zones",
+    "sowing conditions",
+    "variety release years",
+    "ICAR-certified technologies",
+    "cropping systems",
+    "water-use efficiency"
+  ],
+  "rajasthan_zone_mapping": {
+    "NWPZ": "Rajasthan except Kota and Udaipur divisions",
+    "CZ": "Kota and Udaipur divisions"
+  },
+  "limitations": [
+    "Variety list is presented under the 2024-25 seed production programme",
+    "Last reviewed date does not establish current seed availability",
+    "Recommendations depend on agro-climatic zone and sowing conditions",
+    "Not a complete wheat cultivation manual"
+  ],
+  "safety_filters": {
+    "allow_variety_information": true,
+    "require_zone_context": true,
+    "require_sowing_condition_context": true,
+    "require_current_verification_for_seed_availability": true,
+    "allow_chemical_recommendations_without_current_verification": false
+  },
+  "ingestion_status": "approved_for_conditional_ingestion_with_safety_filters",
+  "notes": "Official ICAR-IIWBR webpage snapshot. Preserve variety names, zones, sowing conditions and release years exactly as published. Do not generalize NWPZ recommendations to Kota and Udaipur divisions."
+}
