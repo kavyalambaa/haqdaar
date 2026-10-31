@@ -32,7 +32,7 @@ export const SUPPORTED_LANGUAGES = {
 
 export class STTManager {
   constructor(options = {}) {
-    this.apiBaseUrl = options.apiBaseUrl || 'http://127.0.0.1:8001';
+    this.apiBaseUrl = options.apiBaseUrl || 'https://haqdaar.onrender.com';
     this.state = STT_STATES.IDLE;
     this.currentLanguage = 'hi';
     
