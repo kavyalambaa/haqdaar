@@ -1,0 +1,7 @@
+haqdaar/
+├── backend/
+├── data/
+├── docs/
+├── frontend/
+├── README.md
+└── requirements.txt
