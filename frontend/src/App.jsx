@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { STTManager, STT_STATES } from './services/sttService';
 import './App.css';
 
-const API_BASE = 'http://127.0.0.1:8001';
+const API_BASE = 'https://haqdaar.onrender.com';
 
 // Top Interactive Hero Slideshow Schemes
 const HERO_SLIDES = [
