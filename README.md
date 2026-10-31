@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌾 HAQDAAR — हकदार
 ### A Multilingual, Voice-First AI Assistant for Rural India
 
@@ -273,3 +274,6 @@ Add a license before permitting reuse or redistribution.
 
 **HAQDAAR — हकदार**  
 *Accessible information. Trusted guidance. Every voice matters.*
+=======
+# haqdaar
+>>>>>>> 5cab4b9a380e9ee806c699891fcf5123b809733c
